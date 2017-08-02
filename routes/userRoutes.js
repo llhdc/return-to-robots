@@ -4,8 +4,9 @@ const User = require('../models/data')
 
 
 router.get('/:id', function(req, res) {
-    let foundUser = User.getUserById(req.params.id);
-  res.render('../views/userpage', { users: [foundUser] });
+    User.getUserById(parseInt(req.params.id), (data) => {
+      res.render('../views/userpage', { users: data });
+    });
 })
 
 module.exports = router;
