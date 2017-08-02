@@ -1058,14 +1058,14 @@ function getUserById(id, callback) {
 
 function findAllEmployed(callback) {
   let profiles = client.db.collection('profiles');
-  profiles.find({'job': null}).toArray((err, data) => {
+  profiles.find({'job': {$ne: null}}).toArray((err, data) => {
     callback(data);
   });
 }
 
 function findAllUnemployed(callback) {
   let profiles = client.db.collection('profiles');
-  profiles.find({'job': {$ne: null}}).toArray((err, data) => {
+  profiles.find({'job': null}).toArray((err, data) => {
     callback(data);
   });
 }
