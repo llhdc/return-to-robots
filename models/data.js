@@ -1073,6 +1073,6 @@ function findAllUnemployed(callback) {
 module.exports = {
   'findAll' : findAll,
   'getUserById' : getUserById,
-  'findAllUnemployed': findAllUnemployed,
-  'findAllEmployed': findAllEmployed
+  'findAllUnemployed' : findAllUnemployed,
+  'findAllEmployed' : findAllEmployed
 };

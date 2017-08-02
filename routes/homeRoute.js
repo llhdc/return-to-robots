@@ -16,13 +16,13 @@ router.get('/employed', function(req, res) {
     User.findAllEmployed((data) => {
       res.render('../views/homepage', { users: data });
     });
-})
+});
 
 router.get('/unemployed', function(req, res) {
     User.findAllUnemployed((data) => {
       res.render('../views/homepage', { users: data });
     });
-})
+});
 
 
 
